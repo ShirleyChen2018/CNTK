@@ -120,7 +120,7 @@ RUN mkdir /usr/local/mklml && \
     ln -s /usr/local external && \
     mkdir -p build && \
     cd build && \
-    cmake .. && \
+    cmake .. -DCMAKE_INSTALL_PREFIX=/ && \
     make && \
     make install DESTDIR=/usr/local && \
     make install DESTDIR=/usr/local/mklml/${MKLDNN_LONG_VERSION} && \
